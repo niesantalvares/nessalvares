@@ -1,0 +1,27 @@
+:root { --bg: #1e1d1c; --text: #eee9df; --muted: #b9b2a7; --link: #eee9df; --toggle-bg: #eee9df; --toggle-dot: #1e1d1c; }
+:root[data-theme="light"] { --bg: #f8f6f1; --text: #24221f; --muted: #6f6960; --link: #24221f; --toggle-bg: #24221f; --toggle-dot: #f8f6f1; }
+* { box-sizing: border-box; }
+html { background: var(--bg); color: var(--text); }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: Georgia, 'Times New Roman', serif; font-size: 18px; line-height: 1.55; }
+.site-shell { width: min(100% - 48px, 560px); margin: 0 auto; padding: 28px 0 80px; }
+.site-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.wordmark { color: var(--text); font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em; text-decoration: none; }
+a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { opacity: .72; }
+main { max-width: 100%; }
+p { margin: 0 0 1.25em; }
+h1 { margin: 0 0 1.2em; font-size: 1.35rem; line-height: 1.25; }
+h2 { margin: 1.9em 0 .65em; font-size: 1.15rem; line-height: 1.3; }
+ul { margin: 0 0 1.25em; padding-left: 1.15em; }
+li { margin: .45em 0; padding-left: .15em; }
+li p { margin: .45em 0 0; }
+strong { font-weight: 700; }
+.back-link { color: var(--muted); font-size: .95rem; margin-bottom: 1.7em; }
+.back-link a { color: var(--muted); }
+.site-footer { margin-top: 3.25em; color: var(--muted); font-size: .9rem; }
+.site-footer a { color: var(--muted); }
+.theme-toggle { width: 42px; height: 22px; padding: 3px; border: 0; border-radius: 999px; background: var(--toggle-bg); cursor: pointer; display: inline-flex; align-items: center; justify-content: flex-start; }
+.theme-toggle span { width: 16px; height: 16px; background: var(--toggle-dot); border-radius: 50%; display: block; transition: transform .2s ease; }
+:root[data-theme="light"] .theme-toggle span { transform: translateX(20px); }
+.theme-toggle:focus-visible { outline: 2px solid var(--text); outline-offset: 4px; }
+@media (max-width: 560px) { body { font-size: 17px; } .site-shell { width: min(100% - 36px, 560px); padding-top: 22px; } }
